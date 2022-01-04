@@ -1,0 +1,4 @@
+*
+!.gitignore
+!glyphs_converter.py
+!generate_all.sh

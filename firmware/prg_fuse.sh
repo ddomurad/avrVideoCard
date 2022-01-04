@@ -1,0 +1,1 @@
+avrdude -p atmega644 -c stk500v2 -P /dev/ttyACM0 -U lfuse:w:0xbf:m -U hfuse:w:0x99:m -U efuse:w:0xff:m
