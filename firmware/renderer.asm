@@ -459,7 +459,7 @@ reti
 
 ;-------------------------------------------------------------------------------
 ; HANDLE LAST LINE
-; Reads SPI. Resets line counter. Updates text colors, and gloval inv reg.
+; Reads SPI. Resets line counter. Updates text colors, and global inv reg.
 handle_last_line:
     read_spi        ; handle SPI
 
@@ -489,7 +489,7 @@ handle_last_line:
     sbrc    REG_B0, 7                   ; if(*displ_color_ptr & 0x80) {
     inc     GLB_INV_REG                 ;   GLB_INV_REG ++; }
 
-    ; Reset lince counter
+    ; Reset line counter
     ; set te VLINE CNT to 0xFFFF, next video line will add +1 and set it to 0x0000
     ldi     REG_B0, 0xff            
     mov     LINE_CNT_REG_L, REG_B0       
@@ -796,7 +796,7 @@ ret
 
 ;-------------------------------------------------------------------------------
 exec_push_right_cmd:    
-sbiw    EXT_CMD_WSTATE_REG_L:EXT_CMD_WSTATE_REG_H, 62
+    sbiw    EXT_CMD_WSTATE_REG_L:EXT_CMD_WSTATE_REG_H, 62
     
     cp      EXT_CMD_STATE_REG, REG_B1
     brlo    finish_cmd

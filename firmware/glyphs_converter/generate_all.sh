@@ -1,5 +1,5 @@
 # python3 ./gen_glyphs.py glyphs1.png ../glyphs/glyphs1.asm 0x1000
-python3 ./gen_glyphs.py der_rouge.png ../glyphs/der_rouge.asm 0x1800
+python3 ./glyphs_converter.py der_rouge.png ../glyphs/der_rouge.asm 0x1800
 
 # python3 ./gen_glyphs.py ascii_8x8.png ../glyphs/glyphs2.asm 0x1800
 # python3 ./gen_glyphs.py msx_cyrillic_8x8.png ../glyphs/glyphs3.asm 0x2000
