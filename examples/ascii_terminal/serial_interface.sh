@@ -1,0 +1,1 @@
+socat file:/dev/ttyUSB0,b9600 - 
